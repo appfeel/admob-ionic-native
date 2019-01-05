@@ -1,0 +1,8 @@
+.DS_Store
+node_modules/
+.idea
+.tmp
+aot/
+scripts/ionic-native-bower
+dist/
+
