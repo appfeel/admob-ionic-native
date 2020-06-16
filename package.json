@@ -1,6 +1,6 @@
 {
   "name": "admob-ionic-native",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Ionic Native - AdMob Native plugin for ionic apps",
   "main": "dist/index.js",
   "typings": "index.d.ts",
