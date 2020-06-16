@@ -23,7 +23,7 @@
   "homepage": "https://github.com/appfeel/admob-ionic-native#readme",
   "module": "index.js",
   "scripts": {
-    "npm run copy-package-json": "cp package.json dist/package.json; cp package.json dist/ngx/package.json",
+    "copy-package-json": "cp package.json dist/package.json; cp package.json dist/ngx/package.json",
     "update": "rsync -av --progress ../../ionic-native/dist/@ionic-native/plugins/admob/* ./dist/ --exclude package.json && rsync -av --progress ../../ionic-native/src/@ionic-native/plugins/admob/* ./src/"
   }
 }
