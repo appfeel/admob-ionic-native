@@ -1,0 +1,20 @@
+{
+    "description": "Ionic Native Admob - Native Admob plugin for ionic apps",
+    "module": "index.js",
+    "typings": "index.d.ts",
+    "author": "appfeel",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/appfeel/admob-ionic-native.git"
+    },
+    "name": "admob-ionic-native",
+    "dependencies": {
+        "@types/cordova": "latest"
+    },
+    "peerDependencies": {
+        "rxjs": "^5.5.0 || ^6.5.0",
+        "@ionic-native/core": "^5.1.0"
+    },
+    "version": "5.26.0"
+}

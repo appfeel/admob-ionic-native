@@ -3,19 +3,27 @@
   "version": "1.0.1",
   "description": "Ionic Native - AdMob Native plugin for ionic apps",
   "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "typings": "index.d.ts",
   "author": "AppFeel<info@appfeel.com>",
   "license": "MIT",
   "peerDependencies": {
-    "@ionic-native/core": "^4.11.0",
-    "@angular/core": "*",
-    "rxjs": "^5.5.11"
+    "@ionic-native/core": "^5.1.0",
+    "rxjs": "^5.5.0 || ^6.5.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/appfeel/admob-ionic-native.git"
+    "url": "git+https://github.com/appfeel/admob-ionic-native.git"
   },
+  "bugs": {
+    "url": "https://github.com/appfeel/admob-ionic-native/issues"
+  },
+  "dependencies": {
+    "@types/cordova": "latest"
+  },
+  "deprecated": false,
+  "homepage": "https://github.com/appfeel/admob-ionic-native#readme",
+  "module": "index.js",
   "scripts": {
-    "update": "rsync -av --progress ../../ionic-native/dist/@ionic-native/admob/* ./dist/ --exclude package.json && rsync -av --progress ../../ionic-native/src/@ionic-native/plugins/admob/* ./src/"
+    "update": "rsync -av --progress ../../ionic-native/dist/@ionic-native/plugins/admob/* ./dist/ --exclude package.json && rsync -av --progress ../../ionic-native/src/@ionic-native/plugins/admob/* ./src/; cp package-ngx.json dist/ngx/package.json"
   }
 }

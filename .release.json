@@ -3,7 +3,8 @@
     "buildCommand": "npm run update",
     "non-interactive": true,
     "npm": {
-        "publish": true
+        "publish": true,
+        "publishPath": "dist"
     },
     "verbose": true,
     "dist": false
