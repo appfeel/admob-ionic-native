@@ -7,7 +7,7 @@
         "publishPath": "dist"
     },
     "hooks": {
-        "before:npm": "npm run copy-package-json"
+        "before:npm:init": "npm run copy-package-json"
     },
     "verbose": true,
     "dist": false
