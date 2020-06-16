@@ -6,6 +6,9 @@
         "publish": true,
         "publishPath": "dist"
     },
+    "hooks": {
+        "before:npm": "npm run copy-package-json"
+    },
     "verbose": true,
     "dist": false
 }
