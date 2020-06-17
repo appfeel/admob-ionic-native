@@ -288,7 +288,7 @@ export interface AdMobEvent {
     plugin: 'cordova-admob',
     pluginRef: 'admob',
     repo: 'https://github.com/appfeel/admob-google-cordova',
-    platforms: ['Android', 'iOS', 'Browser']
+    platforms: ['Android', 'iOS', 'Browser'],
 })
 @Injectable()
 export class Admob extends IonicNativePlugin {
@@ -400,26 +400,42 @@ export class Admob extends IonicNativePlugin {
     }
 
     /**
-     * Called when an ad is received
+     * Called when an ad is received.
+     *
+     * *WARNING*: only **ionic^4**. Older versions of ionic, use:
+     * 
+     * ```js
+     * document.addEventListener(window.admob.events.onAdLoaded, () => { });
+     * ```
+     * 
+     * Please refer to the documentation on https://admob-ionic.com/Events.
      * @returns {Observable<AdMobEvent>} Returns an observable when an ad is received
      */
     @Cordova({
         eventObservable: true,
         event: 'appfeel.cordova.admob.onAdLoaded',
-        element: document
+        element: document,
     })
     onAdLoaded(): Observable<AdMobEvent> {
         return;
     }
 
     /**
-     * Called when an ad request failed
+     * Called when an ad request failed.
+     *
+     * *WARNING*: only **ionic^4**. Older versions of ionic, use:
+     * 
+     * ```js
+     * document.addEventListener(window.admob.events.onAdFailedToLoad, () => { });
+     * ```
+     * 
+     * Please refer to the documentation on https://admob-ionic.com/Events.
      * @returns {Observable<AdMobEvent>} Returns an observable when an ad request is failed
      */
     @Cordova({
         eventObservable: true,
         event: 'appfeel.cordova.admob.onAdFailedToLoad',
-        element: document
+        element: document,
     })
     onAdFailedToLoad(): Observable<AdMobEvent> {
         return;
@@ -427,13 +443,21 @@ export class Admob extends IonicNativePlugin {
 
     /**
      * Called when an ad opens an overlay that covers the screen.
-     * Please note that onPause cordova event is raised when an interstitial is shown
+     * Please note that onPause cordova event is raised when an interstitial is shown.
+     *
+     * *WARNING*: only **ionic^4**. Older versions of ionic, use:
+     * 
+     * ```js
+     * document.addEventListener(window.admob.events.onAdOpened, () => { });
+     * ```
+     * 
+     * Please refer to the documentation on https://admob-ionic.com/Events.
      * @returns {Observable<AdMobEvent>} Returns an observable when an ad is opened
      */
     @Cordova({
         eventObservable: true,
         event: 'appfeel.cordova.admob.onAdOpened',
-        element: document
+        element: document,
     })
     onAdOpened(): Observable<AdMobEvent> {
         return;
@@ -441,13 +465,21 @@ export class Admob extends IonicNativePlugin {
 
     /**
      * Called when the user is about to return to the application after clicking on an ad.
-     * Please note that onResume cordova event is raised when an interstitial is closed
+     * Please note that onResume cordova event is raised when an interstitial is closed.
+     *
+     * *WARNING*: only **ionic^4**. Older versions of ionic, use:
+     * 
+     * ```js
+     * document.addEventListener(window.admob.events.onAdClosed, () => { });
+     * ```
+     * 
+     * Please refer to the documentation on https://admob-ionic.com/Events.
      * @returns {Observable<AdMobEvent>} Returns an observable when an ad is closed
      */
     @Cordova({
         eventObservable: true,
         event: 'appfeel.cordova.admob.onAdClosed',
-        element: document
+        element: document,
     })
     onAdClosed(): Observable<AdMobEvent> {
         return;
@@ -455,51 +487,84 @@ export class Admob extends IonicNativePlugin {
 
     /**
      * Called when the user leaves the application after clicking an ad (e.g., to go to the browser)
-     * @returns {Observable<AdMobEvent>} Returns an observable when an ad leaves the application
+     * @returns {Observable<AdMobEvent>} Returns an observable when an ad leaves the application.
+     *
+     * *WARNING*: only **ionic^4**. Older versions of ionic, use:
+     * 
+     * ```js
+     * document.addEventListener(window.admob.events.onAdLeftApplication, () => { });
+     * ```
+     * 
+     * Please refer to the documentation on https://admob-ionic.com/Events.
+     * @returns {Observable<AdMobEvent>} Returns an observable when application is left due to an ad click
      */
     @Cordova({
         eventObservable: true,
         event: 'appfeel.cordova.admob.onAdLeftApplication',
-        element: document
+        element: document,
     })
     onAdLeftApplication(): Observable<AdMobEvent> {
         return;
     }
 
     /**
-     * Called when the user has been rewarded by an ad
+     * Called when the user has been rewarded by an ad.
+     *
+     * *WARNING*: only **ionic^4**. Older versions of ionic, use:
+     * 
+     * ```js
+     * document.addEventListener(window.admob.events.onRewardedAd, () => { });
+     * ```
+     * 
+     * Please refer to the documentation on https://admob-ionic.com/Events.
      * @returns {Observable<AdMobEvent>} Returns an observable when the user rewards an ad
      */
     @Cordova({
         eventObservable: true,
         event: 'appfeel.cordova.admob.onRewardedAd',
-        element: document
+        element: document,
     })
     onRewardedAd(): Observable<AdMobEvent> {
         return;
     }
 
     /**
-     * Called when the video of a rewarded ad started
+     * Called when the video of a rewarded ad started.
+     *
+     * *WARNING*: only **ionic^4**. Older versions of ionic, use:
+     * 
+     * ```js
+     * document.addEventListener(window.admob.events.onRewardedAdVideoStarted, () => { });
+     * ```
+     * 
+     * Please refer to the documentation on https://admob-ionic.com/Events.
      * @returns {Observable<AdMobEvent>} Returns an observable when the video is started
      */
     @Cordova({
         eventObservable: true,
         event: 'appfeel.cordova.admob.onRewardedAdVideoStarted',
-        element: document
+        element: document,
     })
     onRewardedAdVideoStarted(): Observable<AdMobEvent> {
         return;
     }
 
     /**
-     * Called when the video of a rewarded ad has completed
+     * Called when the video of a rewarded ad has completed.
+     *
+     * *WARNING*: only **ionic^4**. Older versions of ionic, use:
+     * 
+     * ```js
+     * document.addEventListener(window.admob.events.onRewardedAdVideoCompleted, () => { });
+     * ```
+     * 
+     * Please refer to the documentation on https://admob-ionic.com/Events.
      * @returns {Observable<AdMobEvent>} Returns an observable when the video is completed
      */
     @Cordova({
         eventObservable: true,
         event: 'appfeel.cordova.admob.onRewardedAdVideoCompleted',
-        element: document
+        element: document,
     })
     onRewardedAdVideoCompleted(): Observable<AdMobEvent> {
         return;
